@@ -4,6 +4,7 @@ http://www.azeemazeez.com/blogs/white-as-milk/
 
 White as Milk is a clean template that puts focus on the content rather than the design. The styles.css file has a Customization section on the very top that lets you quickly tweak the template if needed.
 
+Forked by Sun, Liwen to support i18n
 
 INSTALLATION
 ============
