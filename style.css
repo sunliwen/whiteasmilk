@@ -119,13 +119,13 @@ body {
 	}
 
 small {
-	font-family: Arial, Helvetica, Sans-Serif;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana,Arial, Helvetica, Sans-Serif;
 	font-size: 0.9em;
 	line-height: 1.5em;
 	}
 
 h1, h2, h3 {
-	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-family: Rockwell, Georgia, Palatino Linotype, Palatino, "Times New Roman", Times, serif;
 	font-weight: bold;
 	}
 

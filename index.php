@@ -7,27 +7,27 @@
 		<?php while (have_posts()) : the_post(); ?>
 
 			<div class="post" id="post-<?php the_ID(); ?>">
-				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				<small><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></small>
+				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>的永久链接"><?php the_title(); ?></a></h2>
+				<small>发表于<?php the_time('Y年n月j日') ?> <!-- by <?php the_author() ?> --></small>
 
 				<div class="entry">
-					<?php the_content('Read the rest of this entry &raquo;'); ?>
+					<?php the_content('阅读全文 &raquo;'); ?>
 				</div>
 
-				<p class="postmetadata">Posted in <?php the_category(', ') ?> | <?php the_tags('Tags: ', ', ', '&nbsp;| '); ?> <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+				<p class="postmetadata"><!--发表于<?php the_category(', ') ?> | --><?php the_tags('标签: ', ', ', '&nbsp;| '); ?> <?php edit_post_link('编辑', '', ' | '); ?>  <?php comments_popup_link('没有评论&#187;', '1个评论 &#187;', '%个评论 &#187;'); ?></p>
 			</div>
 
 		<?php endwhile; ?>
 
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+			<div class="alignleft"><?php next_posts_link('&laquo; 较早的文章') ?></div>
+			<div class="alignright"><?php previous_posts_link('较新的文章 &raquo;') ?></div>
 		</div>
 
 	<?php else : ?>
 
-		<h2 class="center">Not Found</h2>
-		<p class="center">Sorry, but you are looking for something that isn't here.</p>
+		<h2 class="center">啥都没找到</h2>
+		<p class="center">抱歉，这没有你要找的东东。</p>
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 
 	<?php endif; ?>
