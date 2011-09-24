@@ -24,13 +24,13 @@
 			<p>发表于<?php the_time('o年n月'); ?>的文章。</p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-			<p>发表于<?php the_time('Y'); ?>的文章。</p>
+			<p>发表于<?php the_time('o年'); ?>的文章。</p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
 			<p>搜索<strong>'<?php the_search_query(); ?>'</strong>相关的文章。</p>
 
 			<?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<p>You are currently browsing the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives.</p>
+			<p>您现在浏览的是 <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 的文章存档.</p>
 
 			<?php } ?>
 

@@ -14,7 +14,7 @@
  	  <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
 		<h2 class="pagetitle">发表于<?php the_time('o年n月'); ?>的文章</h2>
  	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-		<h2 class="pagetitle">发表于<?php the_time('o'); ?>的文章</h2>
+		<h2 class="pagetitle">发表于<?php the_time('o年'); ?>的文章</h2>
 	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
 		<h2 class="pagetitle">作者</h2>
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
@@ -36,7 +36,7 @@
 					<?php the_content() ?>
 				</div>
 
-        <p class="postmetadata"><?php the_tags('标签: ', ', ', '&nbsp;| '); ?> <?php edit_post_link('编辑', '', ' | '); ?>  <?php comments_popup_link('没有评论 &#187;', '1个评论 &#187;', '%个评论 &#187;'); ?></p>
+        <p class="postmetadata"><?php the_tags('标签: ', ', ', '&nbsp;| '); ?> <?php edit_post_link('编辑', '', ' | '); ?>  <?php comments_popup_link('没有评论 &#187;', '1条评论 &#187;', '%条评论 &#187;'); ?></p>
 
 			</div>
 
@@ -49,7 +49,7 @@
 
 	<?php else : ?>
 
-		<h2 class="center">木有找到</h2>
+		<h2 class="center">没有找到</h2>
 		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 
 	<?php endif; ?>

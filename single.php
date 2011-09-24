@@ -15,7 +15,7 @@
 			<div class="entry">
 				<?php the_content('<p class="serif">继续阅读 &raquo;</p>'); ?>
 
-				<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+				<?php wp_link_pages(array('before' => '<p><strong>页面:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 				<?php the_tags( '<p id="tags">标签: ', ', ', '</p>'); ?>
 
 				<p class="postmetadata alt">
@@ -24,7 +24,7 @@
 							You'll need to download this plugin, and follow the instructions:
 							http://binarybonsai.com/archives/2004/08/17/time-since-plugin/ */
 							/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
-						    发表于<?php the_time('Y年n月j日') ?>
+						    发表于<?php the_time('o年n月j日') ?>
 					        <?php post_comments_feed_link('订阅评论'); ?>,
 
 						<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
@@ -33,7 +33,7 @@
 
 						<?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
 							// Only Pings are Open ?>
-							评论关闭，但可以<a href="<?php trackback_url(); ?> " rel="trackback">引用本文</a>.
+							评论关闭，但您可以<a href="<?php trackback_url(); ?> " rel="trackback">引用本文</a>.
 
 						<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
 							// Comments are open, Pings are not ?>
@@ -41,7 +41,7 @@
 
 						<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
 							// Neither Comments, nor Pings are open ?>
-							评论关闭，也不能ping。
+							评论关闭，也不能ping这篇文章。
 
 						<?php } edit_post_link('编辑此文章','','.'); ?>
 

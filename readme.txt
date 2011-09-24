@@ -1,3 +1,7 @@
+牛奶白 1.8 by Liwen
+http://sunliwen.com/white-as-milk
+
+牛奶白, 汉化自Azeem Azeez的作品WHITE AS MILK，功能上完全一样，只是汉化了文字资源。版本号与原作品一致，便于升级。
 
 WHITE AS MILK 1.8 by Azeem Azeez
 http://www.azeemazeez.com/blogs/white-as-milk/

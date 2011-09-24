@@ -7,8 +7,8 @@
 		<h2 class="pagetitle">搜索结果</h2>
 
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; 较新的文章') ?></div>
-			<div class="alignright"><?php previous_posts_link('较旧的文章 &raquo;') ?></div>
+			<div class="alignleft"><?php next_posts_link('&laquo; 较早的文章') ?></div>
+			<div class="alignright"><?php previous_posts_link('较新的文章 &raquo;') ?></div>
 		</div>
 
 
@@ -18,7 +18,7 @@
 				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>的永久链接"><?php the_title(); ?></a></h3>
 				<small>发表于<?php the_time('o年n月j日') ?></small>
 
-				<p class="postmetadata"><?php the_tags('标签: ', ', ', ' | '); ?>  <?php edit_post_link('编辑', '', ' | '); ?>  <?php comments_popup_link('没有评论&#187;', '1个评论&#187;', '%个评论&#187;'); ?></p>
+				<p class="postmetadata"><?php the_tags('标签: ', ', ', ' | '); ?>  <?php edit_post_link('编辑', '', ' | '); ?>  <?php comments_popup_link('没有评论&#187;', '1条评论&#187;', '%条评论&#187;'); ?></p>
 			</div>
 
 		<?php endwhile; ?>

@@ -20,7 +20,7 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<h3 id="comments"><?php comments_number('没有评论', '一条评论', '%条评论' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments">&#8220;<?php the_title(); ?>&#8221;<?php comments_number('没有评论', '1条评论', '%条评论' );?></h3>
 
 	<ol class="commentlist">
 
@@ -34,7 +34,7 @@
 			<?php endif; ?>
 			<br />
 
-			<small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('o年n月j日') ?> at <?php comment_time("H:i:s") ?></a> <?php edit_comment_link('编辑','&nbsp;&nbsp;',''); ?></small>
+			<small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('o年n月j日') ?> <?php comment_time("H:i:s") ?></a> <?php edit_comment_link('编辑','&nbsp;&nbsp;',''); ?></small>
 
 			<?php comment_text() ?>
 
@@ -93,7 +93,7 @@
 
 <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="提交评论" />
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="发表评论" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 </p>
 <?php do_action('comment_form', $post->ID); ?>
